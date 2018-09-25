@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import PhotoSphereViewer from 'photo-sphere-viewer';
+import ProductDetail from 'components/productDetail';
 
 import { map } from 'lodash';
 
@@ -43,7 +45,7 @@ class PhotoViewer extends Component {
           height: 32,
           className: 'pv-marker-tag',
           ...tagMarker,
-          content: 'a quick brown fox jumped over the little lazy dog.',
+          content: 'a quick',
         };
       }),
     ];
@@ -65,14 +67,9 @@ class PhotoViewer extends Component {
 
   onInitViewer() {
     this.viewer.on('select-marker', marker => {
-      // console.log('animate');
-      // this.viewer.animate(
-      //   {
-      //     x: 2850,
-      //     y: 1270,
-      //   },
-      //   400
-      // );
+      setTimeout(() => {
+        ReactDOM.render(<ProductDetail />, document.querySelector('.psv-panel-content'));
+      });
     });
   }
 
