@@ -30,5 +30,7 @@ export default {
       },
     },
   ],
-  products: {},
+  products: {
+    p1: {},
+  },
 };
