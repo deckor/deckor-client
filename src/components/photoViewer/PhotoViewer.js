@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ProductDetail from 'components/productDetail';
 
-import { map, reduce } from 'lodash';
+import { map, pick, reduce } from 'lodash';
 
 import 'photo-sphere-viewer/dist/photo-sphere-viewer.css';
 import './PhotoViewer.css';
@@ -33,8 +33,7 @@ class PhotoViewer extends Component {
       (acc, scene) => {
         acc[scene.id] = {
           type: 'equirectangular',
-          panorama: scene.path,
-          hfov: scene.hfov,
+          ...pick(scene, 'panorama', 'hfov'),
           hotSpots: this.getHotSpots(scene.markers),
         };
 

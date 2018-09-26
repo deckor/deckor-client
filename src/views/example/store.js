@@ -2,7 +2,7 @@ export default {
   scenes: [
     {
       id: 'view_1',
-      path: `${process.env.PUBLIC_URL}/img/view_1.jpg`,
+      panorama: `${process.env.PUBLIC_URL}/img/view_1.jpg`,
       hfov: 120,
       markers: {
         navs: [
@@ -23,7 +23,8 @@ export default {
     },
     {
       id: 'view_2',
-      path: `${process.env.PUBLIC_URL}/img/view_2.jpg`,
+      panorama: `${process.env.PUBLIC_URL}/img/view_2.jpg`,
+      hfov: 120,
       markers: {
         navs: [],
         tags: [],
