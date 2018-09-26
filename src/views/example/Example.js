@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PhotoViewer from 'components/photoViewer';
+import PhotoViewer, { PhotoViewer2 } from 'components/photoViewer';
 
 import store from './store';
 
@@ -12,7 +12,7 @@ class Example extends Component {
   };
 
   render() {
-    return <PhotoViewer {...this.state.current} />;
+    return <PhotoViewer2 {...this.state.current} />;
   }
 }
 

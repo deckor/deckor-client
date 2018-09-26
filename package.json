@@ -5,6 +5,7 @@
   "dependencies": {
     "css-reset-and-normalize": "^1.0.1",
     "lodash": "^4.17.11",
+    "memoize-one": "^4.0.2",
     "numeral": "^2.0.6",
     "photo-sphere-viewer": "^3.4.1",
     "react": "^16.5.2",

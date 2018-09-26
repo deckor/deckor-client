@@ -8,30 +8,59 @@
 
 @keyframes hvr-wobble-bottom {
   16.65% {
-    -webkit-transform: skew(-12deg);
     transform: skew(-12deg);
   }
   33.3% {
-    -webkit-transform: skew(10deg);
     transform: skew(10deg);
   }
   49.95% {
-    -webkit-transform: skew(-6deg);
     transform: skew(-6deg);
   }
   66.6% {
-    -webkit-transform: skew(4deg);
     transform: skew(4deg);
   }
   83.25% {
-    -webkit-transform: skew(-2deg);
     transform: skew(-2deg);
   }
   100% {
-    -webkit-transform: skew(0);
     transform: skew(0);
   }
 }
 
 /* transform-origin: 50% 50% 0px;
   transform: translate3d(799px, 427px, 0px); */
+
+.pnlm-hotspot--nav {
+  background-image: url('../../icons/circle.svg');
+  height: 32px;
+  width: 32px;
+}
+
+.pnlm-hotspot--tag {
+  background-image: url('../../icons/tag.svg');
+  height: 24px;
+  width: 24px;
+}
+
+.panel {
+  background: white;
+  box-shadow: 2px -6px 21px 0 rgba(0, 0, 0, 0.16);
+  height: 100%;
+  opacity: 0;
+  overflow: auto;
+  padding: 24px 24px 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate3d(100%, 0, 0);
+  transition-property: opacity, transform, -webkit-transform;
+  transition-timing-function: ease-in-out;
+  width: 480px;
+  z-index: 100;
+}
+
+.panel--open {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition-duration: 0.2s;
+}
