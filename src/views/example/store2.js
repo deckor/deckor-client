@@ -3,20 +3,17 @@ export default {
     {
       id: 'view_1',
       path: `${process.env.PUBLIC_URL}/img/view_1.jpg`,
-      hfov: 120,
       markers: {
         navs: [
           {
-            pitch: -9.81,
-            yaw: 47.43,
-            sceneId: 'view_2',
+            x: 2850,
+            y: 1270,
           },
         ],
         tags: [
           {
-            pitch: -20.37,
-            yaw: 5.88,
-            productId: 'p1',
+            x: 2190,
+            y: 1460,
           },
         ],
       },

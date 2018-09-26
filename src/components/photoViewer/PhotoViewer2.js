@@ -1,78 +1,85 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
+import PhotoSphereViewer from 'photo-sphere-viewer';
 import ProductDetail from 'components/productDetail';
 
 import { map } from 'lodash';
-import memoizeOne from 'memoize-one';
 
 import 'photo-sphere-viewer/dist/photo-sphere-viewer.css';
 import './PhotoViewer.css';
 
-class PhotoViewer2 extends Component {
+import circle from 'icons/circle.svg';
+import tag from 'icons/tag.svg';
+
+class PhotoViewer extends Component {
   state = {
-    isDetailVisible: false,
+    derivedMarkers: [],
   };
 
   componentDidMount() {
     this.initViewer();
+    this.onInitViewer();
+  }
+
+  static getDerivedStateFromProps({ markers }) {
+    const derivedMarkers = [
+      ...map(markers.navs, (navMarker, i) => {
+        return {
+          id: `nav-${i}`,
+          image: circle,
+          width: 32,
+          height: 32,
+          // style: {
+          //   transform: 'rotate3d(1, 1, 1, 45deg)',
+          // },
+          className: 'pv-marker-nav',
+          ...navMarker,
+        };
+      }),
+      ...map(markers.tags, (tagMarker, i) => {
+        return {
+          id: `tag-${i}`,
+          image: tag,
+          width: 32,
+          height: 32,
+          className: 'pv-marker-tag',
+          ...tagMarker,
+          content: 'a quick',
+        };
+      }),
+    ];
+
+    return {
+      derivedMarkers,
+    };
   }
 
   initViewer() {
-    window.pannellum.viewer('viewer', {
-      type: 'equirectangular',
+    this.viewer = new PhotoSphereViewer({
+      container: 'viewer',
       panorama: this.props.path,
-      autoLoad: true,
-      compass: true,
-      hfov: 180,
-      hotSpotDebug: true,
-      hotSpots: this.getHotSpots(this.props.markers),
+      time_anim: false,
+      default_fov: 90,
+      markers: this.state.derivedMarkers,
     });
   }
 
-  getHotSpots = memoizeOne(markers => [
-    ...map(markers.navs, (navMarker, i) => {
-      return {
-        id: `nav-${i}`,
-        pitch: -9.81,
-        yaw: 47.43,
-        cssClass: 'pnlm-hotspot--nav',
-        clickHandlerFunc: this.onClickHotspot.bind(this, 'nav', i),
-      };
-    }),
-    ...map(markers.tags, (tagMarker, i) => {
-      return {
-        id: `tag-${i}`,
-        pitch: -20.37,
-        yaw: 5.88,
-        cssClass: 'pnlm-hotspot--tag',
-        clickHandlerFunc: this.onClickHotspot.bind(this, 'tag', i),
-      };
-    }),
-  ]);
-
-  onClickHotspot = (type, i) => {
-    console.log('clicked hotspot', type, i);
-    if (type === 'tag') {
-      this.setState(({ isDetailVisible }) => ({
-        isDetailVisible: !isDetailVisible,
-      }));
-    }
-  };
+  onInitViewer() {
+    this.viewer.on('select-marker', marker => {
+      setTimeout(() => {
+        ReactDOM.render(<ProductDetail />, document.querySelector('.psv-panel-content'));
+      });
+    });
+  }
 
   render() {
-    const { isDetailVisible } = this.state;
-
-    return (
-      <React.Fragment>
-        <div id="viewer" className="full-space" />
-        <div className={`panel${isDetailVisible ? ' panel--open' : ''}`}>{isDetailVisible && <ProductDetail />}</div>
-      </React.Fragment>
-    );
+    return <div id="viewer" className="full-space" />;
   }
 }
 
-PhotoViewer2.propTypes = {
+PhotoViewer.propTypes = {
   path: PropTypes.string,
 };
 
-export default PhotoViewer2;
+export default PhotoViewer;

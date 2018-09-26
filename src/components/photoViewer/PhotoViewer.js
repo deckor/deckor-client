@@ -1,80 +1,92 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import PhotoSphereViewer from 'photo-sphere-viewer';
 import ProductDetail from 'components/productDetail';
 
-import { map } from 'lodash';
+import { map, reduce } from 'lodash';
 
 import 'photo-sphere-viewer/dist/photo-sphere-viewer.css';
 import './PhotoViewer.css';
 
-import circle from 'icons/circle.svg';
-import tag from 'icons/tag.svg';
-
 class PhotoViewer extends Component {
   state = {
-    derivedMarkers: [],
+    isDetailVisible: false,
   };
 
   componentDidMount() {
     this.initViewer();
-    this.onInitViewer();
   }
 
-  static getDerivedStateFromProps({ markers }) {
-    const derivedMarkers = [
+  initViewer() {
+    const { scenes } = this.props;
+
+    const config = {
+      default: {
+        firstScene: scenes[0].id,
+        sceneFadeDuration: 1000,
+        autoLoad: true,
+        hotSpotDebug: true,
+      },
+    };
+
+    config.scenes = reduce(
+      scenes,
+      (acc, scene) => {
+        acc[scene.id] = {
+          type: 'equirectangular',
+          panorama: scene.path,
+          hfov: scene.hfov,
+          hotSpots: this.getHotSpots(scene.markers),
+        };
+
+        return acc;
+      },
+      {}
+    );
+
+    window.pannellum.viewer('viewer', config);
+  }
+
+  getHotSpots(markers) {
+    return [
       ...map(markers.navs, (navMarker, i) => {
         return {
           id: `nav-${i}`,
-          image: circle,
-          width: 32,
-          height: 32,
-          // style: {
-          //   transform: 'rotate3d(1, 1, 1, 45deg)',
-          // },
-          className: 'pv-marker-nav',
-          ...navMarker,
+          type: 'scene',
+          pitch: navMarker.pitch,
+          yaw: navMarker.yaw,
+          sceneId: navMarker.sceneId,
+          cssClass: 'pnlm-hotspot--nav',
         };
       }),
       ...map(markers.tags, (tagMarker, i) => {
         return {
           id: `tag-${i}`,
-          image: tag,
-          width: 32,
-          height: 32,
-          className: 'pv-marker-tag',
-          ...tagMarker,
-          content: 'a quick',
+          pitch: tagMarker.pitch,
+          yaw: tagMarker.yaw,
+          cssClass: 'pnlm-hotspot--tag',
+          clickHandlerFunc: this.onClickTagHotSpot.bind(this, tagMarker.productId),
         };
       }),
     ];
-
-    return {
-      derivedMarkers,
-    };
   }
 
-  initViewer() {
-    this.viewer = new PhotoSphereViewer({
-      container: 'viewer',
-      panorama: this.props.path,
-      time_anim: false,
-      default_fov: 90,
-      markers: this.state.derivedMarkers,
-    });
-  }
-
-  onInitViewer() {
-    this.viewer.on('select-marker', marker => {
-      setTimeout(() => {
-        ReactDOM.render(<ProductDetail />, document.querySelector('.psv-panel-content'));
-      });
-    });
-  }
+  onClickTagHotSpot = productId => {
+    this.setState(({ isDetailVisible }) => ({
+      isDetailVisible: !isDetailVisible,
+      productId: isDetailVisible ? undefined : productId,
+    }));
+  };
 
   render() {
-    return <div id="viewer" className="full-space" />;
+    const { isDetailVisible, productId } = this.state;
+    const product = this.props.products[productId];
+
+    return (
+      <React.Fragment>
+        <div id="viewer" className="full-space" />
+        <div className={`panel${isDetailVisible ? ' panel--open' : ''}`}>{isDetailVisible && <ProductDetail product={product} />}</div>
+      </React.Fragment>
+    );
   }
 }
 
