@@ -2,11 +2,10 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import numeral from 'numeral';
 
-import productImages from './ss.png';
-import calendarImg from './cal.png';
-import tagImg from './tag.png';
-import ecoFriendlyImg from './eco-friendly.jpeg';
-import fAssuredImg from './f-assured.png';
+import calendarImg from 'imgs/cal.png';
+import tagImg from 'imgs/tag.png';
+import ecoFriendlyImg from 'imgs/eco-friendly.jpeg';
+import fAssuredImg from 'imgs/f-assured.png';
 import './ProductDetail.css';
 
 const COMMA_FORMAT = '0,0';
@@ -16,7 +15,7 @@ class ProductDetail extends Component {
   renderOfferRow(offer) {
     return (
       <div className="offer-row mar-b-12 color-212121">
-        <img src={offer.icon} className="offer-icon mar-r-16"/>
+        <img src={offer.icon} alt="icon" className="offer-icon mar-r-16"/>
         <div className="txt-12">
           <strong>
             {offer.title}
@@ -57,7 +56,7 @@ class ProductDetail extends Component {
     return (
       <img
         alt="images"
-        src={productImages}
+        src={this.props.product.imageCollectionUrl}
         className="img-carousel"
       />
     );
@@ -88,7 +87,7 @@ class ProductDetail extends Component {
         <p className="mar-t-24">PRODUCT DESCRIPTION</p>
         <div className="mar-t-16">
           <div className="center-y">
-            <img className="pr-det-desc-img flex-item-auto" src={ecoFriendlyImg}/>
+            <img className="pr-det-desc-img flex-item-auto" src={ecoFriendlyImg} alt="eco friendly"/>
             <div className="flex-item-1 mar-l-16">
               <p className="txt-14">
                 Eco Friendly
@@ -129,41 +128,23 @@ class ProductDetail extends Component {
 }
 
 ProductDetail.propTypes = {
-  product: PropTypes.object,
-};
-
-ProductDetail.defaultProps = {
-  product: {
-    name: 'Spacewood Mayflower Engineering Wood Queen Box Bed (Finish Color - Brown)',
-    price: 14499,
-    averageRating: 3.8,
-    totalRatings: 2232,
-    totalReviews: 524,
-    emi: 2417,
-    offers: [
-      {
-        id: 1,
-        title: 'Bank Offer',
-        description: '5% off* on EMI transactions with HDFC Bank Credit Cards',
-        extraInfo: 'T&C',
-        extraInfoLink: '',
-      },
-      {
-        id: 2,
-        title: 'Bank Offer',
-        description: '5% off* on EMI transactions with HDFC Bank Credit Cards',
-        extraInfo: 'T&C',
-        extraInfoLink: '',
-      },
-      {
-        id: 3,
-        title: 'Bank Offer',
-        description: '5% off* with Axis Bank Buzz Credit Card',
-        extraInfo: 'T&C',
-        extraInfoLink: '',
-      },
-    ],
-  }
+  product: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    imageCollectionUrl: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    averageRating: PropTypes.number.isRequired,
+    totalRatings: PropTypes.number.isRequired,
+    totalReviews: PropTypes.number.isRequired,
+    emi: PropTypes.number.isRequired,
+    offers: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+      extraInfo: PropTypes.string.isRequired,
+      extraInfoLink: PropTypes.string.isRequired,
+    })),
+  }),
 };
 
 export default ProductDetail;

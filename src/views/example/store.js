@@ -31,6 +31,38 @@ export default {
     },
   ],
   products: {
-    p1: {},
+    p1: {
+      id: 'p1',
+      imageCollectionUrl: `${process.env.PUBLIC_URL}/img/p1-detail.png`,
+      name: 'Spacewood Mayflower Engineering Wood Queen Box Bed (Finish Color - Brown)',
+      price: 14499,
+      averageRating: 3.8,
+      totalRatings: 2232,
+      totalReviews: 524,
+      emi: 2417,
+      offers: [
+        {
+          id: 1,
+          title: 'Bank Offer',
+          description: '5% off* on EMI transactions with HDFC Bank Credit Cards',
+          extraInfo: 'T&C',
+          extraInfoLink: '',
+        },
+        {
+          id: 2,
+          title: 'Bank Offer',
+          description: '5% off* on EMI transactions with HDFC Bank Credit Cards',
+          extraInfo: 'T&C',
+          extraInfoLink: '',
+        },
+        {
+          id: 3,
+          title: 'Bank Offer',
+          description: '5% off* with Axis Bank Buzz Credit Card',
+          extraInfo: 'T&C',
+          extraInfoLink: '',
+        },
+      ],
+    },
   },
 };
