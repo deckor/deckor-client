@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import Example from 'views/example';
 
+import './utility.css';
+
 //import logo from './logo.svg';
 //import './App.css';
 

@@ -1,0 +1,135 @@
+a {
+    color: #2874f0;
+}
+
+button {
+    border: 0;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #fb631c;
+    color: #ffffff;
+}
+
+.btn-secondary {
+    background-color: #fff;
+    color: #7c7c7c;
+}
+
+.center-y {
+    display: flex;
+    align-items: center;
+}
+
+.flex-row {
+    display: flex;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.ovf-y-auto {
+    overflow-y: auto;
+}
+
+.txt-12 {
+    font-size: 12px;
+}
+
+.txt-14 {
+    font-size: 14px;
+    line-height: 2;
+}
+
+.txt-17 {
+    font-size: 17px;
+    line-height: 1.65;
+}
+
+.txt-24 {
+    font-size: 24px;
+    line-height: 1.17;
+}
+
+.color-272727 {
+    color: #272727;
+}
+
+.color-212121 {
+    color: #212121;
+}
+
+.color-878787 {
+    color: #878787;
+}
+
+.color-white {
+    color: #ffffff;
+}
+
+.mar-t-28 {
+    margin-top: 28px;
+}
+
+.mar-t-24 {
+    margin-top: 24px;
+}
+
+.mar-t-16 {
+    margin-top: 16px;
+}
+
+.mar-t-12 {
+    margin-top: 12px;
+}
+
+.mar-t-8 {
+    margin-top: 8px;
+}
+
+.mar-r-16 {
+    margin-right: 16px;
+}
+
+.mar-l-4 {
+    margin-left: 4px;
+}
+
+.mar-l-16 {
+    margin-left: 16px;
+}
+
+.mar-b-12 {
+    margin-bottom: 12px;
+}
+
+.pad-t-24 {
+    padding-top: 24px;
+}
+
+.pad-x-24 {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.pad-l-8 {
+    padding-left: 8px;
+}
+
+.pos-rel {
+    position: relative;
+}
+
+.pos-abs {
+    position: absolute;
+}
+
+.pos-b-0 {
+    bottom: 0;
+}
+
+.pos-l-0 {
+    left: 0;
+}
