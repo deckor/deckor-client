@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import ProductDetail from 'components/productDetail';
 
-import { map, pick, reduce } from 'lodash';
+import {map, pick, reduce} from 'lodash';
 
 import 'photo-sphere-viewer/dist/photo-sphere-viewer.css';
 import './PhotoViewer.css';
@@ -55,6 +55,7 @@ class PhotoViewer extends Component {
           yaw: navMarker.yaw,
           sceneId: navMarker.sceneId,
           cssClass: 'pnlm-hotspot--nav',
+          clickHandlerFunc: this.onNavClick,
         };
       }),
       ...map(markers.tags, (tagMarker, i) => {
@@ -69,12 +70,28 @@ class PhotoViewer extends Component {
     ];
   }
 
-  onClickTagHotSpot = productId => {
-    this.setState(({ isDetailVisible }) => ({
-      isDetailVisible: !isDetailVisible,
-      productId: isDetailVisible ? undefined : productId,
-    }));
+  onNavClick = () => {
+    this.setState({
+      isDetailVisible: false,
+      productId: undefined,
+    });
   };
+
+  onClickTagHotSpot = productId => {
+    setTimeout(() => {
+      this.setState(() => ({
+        isDetailVisible: true,
+        productId: productId,
+      }));
+    });
+  };
+
+  handleViewerClick = () => {
+    this.setState(() => ({
+      isDetailVisible: false,
+      productId: undefined,
+    }));
+  }
 
   render() {
     const { isDetailVisible, productId } = this.state;
@@ -82,8 +99,9 @@ class PhotoViewer extends Component {
 
     return (
       <React.Fragment>
-        <div id="viewer" className="full-space" />
-        <div className={`panel${isDetailVisible ? ' panel--open' : ''}`}>{isDetailVisible && <ProductDetail product={product} />}</div>
+        <div id="viewer" className="full-space" onClick={this.handleViewerClick}/>
+        <div className={`panel${isDetailVisible ? ' panel--open' : ''}`}>{isDetailVisible &&
+        <ProductDetail product={product}/>}</div>
       </React.Fragment>
     );
   }
