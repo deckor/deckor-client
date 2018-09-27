@@ -24,7 +24,7 @@ class PhotoViewer extends Component {
         firstScene: scenes[0].id,
         sceneFadeDuration: 1000,
         autoLoad: true,
-        hotSpotDebug: true,
+        // hotSpotDebug: true,
       },
     };
 
