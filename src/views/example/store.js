@@ -1,3 +1,5 @@
+import products from './productsStore';
+
 export default {
   scenes: [
     {
@@ -79,7 +81,7 @@ export default {
           {
             pitch: -9.80,
             yaw: 35.98,
-            productId: 'p1',
+            productId: 'sofa',
           },
         ],
       },
@@ -130,27 +132,27 @@ export default {
           {
             pitch: -17.5,
             yaw: 1.94,
-            productId: 'p1',
+            productId: 'sofa',
           },
           {
             pitch: -22.75,
             yaw: 28.73,
-            productId: 'p1',
+            productId: 'round_side_table',
           },
           {
             pitch: -10.79,
             yaw: 51.79,
-            productId: 'p1',
+            productId: 'tv_unit',
           },
           {
             pitch: -13.16,
             yaw: -16.43,
-            productId: 'p1',
+            productId: 'side_table',
           },
           {
             pitch: -3.42,
             yaw: -16.23,
-            productId: 'p1',
+            productId: 'lamp',
           },
         ],
       },
@@ -196,37 +198,37 @@ export default {
           {
             pitch: -16.11,
             yaw: -1.9,
-            productId: 'p1',
+            productId: 'tv_unit',
           },
           {
             pitch: -13.91,
             yaw: -61.18,
-            productId: 'p1',
+            productId: 'sofa',
           },
           {
             pitch: -10.80,
             yaw: -95.42,
-            productId: 'p1',
+            productId: 'sofa',
           },
           {
             pitch: -19.50,
             yaw: -78.30,
-            productId: 'p1',
+            productId: 'coffee_table',
           },
           {
             pitch: -27.21,
             yaw: -67.03,
-            productId: 'p1',
+            productId: 'modern_lamp',
           },
           {
             pitch: -4.25,
             yaw: -79.24,
-            productId: 'p1',
+            productId: 'lamp',
           },
           {
             pitch: -59.48,
             yaw: -64.67,
-            productId: 'p1',
+            productId: 'round_side_table',
           },
         ],
       },
@@ -272,32 +274,32 @@ export default {
           {
             pitch: -15.32,
             yaw: 1.94,
-            productId: 'p1',
+            productId: 'sofa',
           },
           {
             pitch: -39.12,
             yaw: 6.47,
-            productId: 'p1',
+            productId: 'coffee_table',
           },
           {
             pitch: -16.85,
             yaw: -27.72,
-            productId: 'p1',
+            productId: 'side_table',
           },
           {
             pitch: -3.73,
             yaw: -27.72,
-            productId: 'p1',
+            productId: 'lamp',
           },
           {
             pitch: -29.77,
             yaw: -98.00,
-            productId: 'p1',
+            productId: 'round_side_table',
           },
           {
             pitch: -16.21,
             yaw: -95.47,
-            productId: 'p1',
+            productId: 'modern_lamp',
           },
         ],
       },
@@ -338,22 +340,27 @@ export default {
           {
             pitch: -20.72,
             yaw: -46.25,
-            productId: 'p1', //sofa
+            productId: 'sofa',
           },
           {
             pitch: -17.00,
             yaw: -68.91,
-            productId: 'p1', //center table
+            productId: 'coffee_table',
           },
           {
             pitch: -14.48,
             yaw: -106.08,
-            productId: 'p1', //mini table
+            productId: 'round_side_table',
+          },
+          {
+            pitch: -5.54,
+            yaw: -104.85,
+            productId: 'modern_lamp',
           },
           {
             pitch: -29.16,
             yaw: -152.23,
-            productId: 'p1', //tv table
+            productId: 'tv_unit',
           },
         ],
       },
@@ -389,22 +396,22 @@ export default {
           {
             pitch: -29.95,
             yaw: -4.00,
-            productId: 'p1',
+            productId: 'side_table',
           },
           {
             pitch: -5.90,
             yaw: -5.83,
-            productId: 'p1',
+            productId: 'lamp',
           },
           {
             pitch: -25.01,
             yaw: -56.06,
-            productId: 'p1',
+            productId: 'sofa',
           },
           {
             pitch: -11.35,
             yaw: -84.64,
-            productId: 'p1',
+            productId: 'tv_unit',
           },
         ],
       },
@@ -435,17 +442,17 @@ export default {
           {
             pitch: -8.06,
             yaw: -46.53,
-            productId: 'p1', //lamp
+            productId: 'lamp',
           },
           {
             pitch: -27.74,
             yaw: -56.26,
-            productId: 'p1', //lamp table
+            productId: 'side_table',
           },
           {
             pitch: -18.04,
             yaw: 6.34,
-            productId: 'p1',
+            productId: 'sofa',
           },
         ],
       },
@@ -486,50 +493,31 @@ export default {
           {
             pitch: -7.38,
             yaw: -92.71,
-            productId: 'p1', //lamp
+            productId: 'lamp', //lamp
           },
           {
             pitch: -27.19,
             yaw: -89.12,
-            productId: 'p1', // mini-table
+            productId: 'side_table', // mini-table
           },
           {
             pitch: -11.71,
             yaw: -121.10,
-            productId: 'p1', //sofa 1
+            productId: 'sofa', //sofa 1
           },
           {
             pitch: -10.17,
             yaw: -64.58,
-            productId: 'p1', //sofa 2
+            productId: 'sofa', //sofa 2
           },
           {
             pitch: -8.35,
             yaw: -77.28,
-            productId: 'p1', //tv
+            productId: 'tv_unit', //tv
           },
         ],
       },
     },
   ],
-  products: {
-    p1: {
-      id: 'p1',
-      imageCollection: [
-        `${process.env.PUBLIC_URL}/img/living-room/coffee_table/1.jpeg`,
-        `${process.env.PUBLIC_URL}/img/living-room/coffee_table/2.jpeg`,
-        `${process.env.PUBLIC_URL}/img/living-room/coffee_table/3.jpeg`,
-        `${process.env.PUBLIC_URL}/img/living-room/coffee_table/4.jpeg`,
-        `${process.env.PUBLIC_URL}/img/living-room/coffee_table/5.jpeg`,
-        // `${process.env.PUBLIC_URL}/img/living-room/coffee_table/6.jpeg`,
-        // `${process.env.PUBLIC_URL}/img/living-room/coffee_table/7.jpeg`,
-      ],
-      name: 'Spacewood Mayflower Engineering Wood Queen Box Bed (Finish Color - Brown)',
-      price: 14499,
-      averageRating: 3.8,
-      totalRatings: 2232,
-      totalReviews: 524,
-      emi: 2417,
-    },
-  },
+  products,
 };
