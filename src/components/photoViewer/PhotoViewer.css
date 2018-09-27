@@ -31,9 +31,11 @@
   transform: translate3d(799px, 427px, 0px); */
 
 .pnlm-hotspot--nav {
-  background-image: url('../../icons/circle.svg');
-  height: 32px;
-  width: 32px;
+  background-image: url('../../icons/balloon.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 56px;
+  width: 56px;
 }
 
 .pnlm-hotspot--tag {

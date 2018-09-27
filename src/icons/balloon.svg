@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 95 112.703">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #2874ef;
+      }
+
+      .cls-2 {
+        filter: url(#Path_6);
+      }
+
+      .cls-3 {
+        filter: url(#Path_5);
+      }
+    </style>
+    <filter id="Path_5" x="0" y="67.8" width="95" height="44.903" filterUnits="userSpaceOnUse">
+      <feOffset dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_6" x="8.204" y="0" width="77.796" height="102.398" filterUnits="userSpaceOnUse">
+      <feOffset dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="4" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="np_location_1607112_000000" transform="translate(-2.898 1)">
+    <g class="cls-3" transform="matrix(1, 0, 0, 1, 2.9, -1)">
+      <path id="Path_5-2" data-name="Path 5" class="cls-1" d="M60.6,73.9h-.3l-1.1,1.7h.9c14.2.8,23.7,4.2,23.7,8.6,0,4.1-13.8,8.7-33.6,8.7s-33.6-4.6-33.6-8.7c0-4.3,9.2-7.7,23.5-8.6L41,75.5l-1.1-1.7h-.3c-15.5.9-24.7,4.8-24.7,10.3,0,5.9,15.6,10.6,35.5,10.6,20.2,0,35.5-4.6,35.5-10.6-.4-5.4-9.8-9.3-25.3-10.2Z" transform="translate(-2.9 1)"/>
+    </g>
+    <g class="cls-2" transform="matrix(1, 0, 0, 1, 2.9, -1)">
+      <path id="Path_6-2" data-name="Path 6" class="cls-1" d="M76.9,32.9a26.9,26.9,0,0,0-53.8,0C23.1,47.8,50,84.4,50,84.4S76.9,47.8,76.9,32.9Zm-40.8,0A13.9,13.9,0,1,1,50,46.8,13.868,13.868,0,0,1,36.1,32.9Z" transform="translate(-2.9 1)"/>
+    </g>
+  </g>
+</svg>

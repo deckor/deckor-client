@@ -21,7 +21,7 @@ class PhotoViewer extends Component {
 
     const config = {
       default: {
-        firstScene: scenes[0].id,
+        firstScene: scenes[9].id,
         sceneFadeDuration: 1000,
         autoLoad: true,
         hotSpotDebug: true,

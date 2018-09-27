@@ -16,6 +16,7 @@ class ProductCarousel extends PureComponent {
   renderImageTile = (image, index) => {
     return (
       <li
+        key={image}
         data-index={index}
         className={cx('cp img-picker-tile', { 'img-picker-tile-selected': index === this.state.currentIndex })}
         onMouseEnter={this.handleMouseEnter}
