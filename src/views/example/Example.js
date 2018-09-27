@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import PhotoViewer from 'components/photoViewer';
 
 import store from './store';
@@ -9,8 +9,17 @@ class Example extends Component {
     products: store.products,
   };
 
+  componentDidMount() {
+    const images = store.scenes.map(scene => {
+      const img = new Image();
+      img.src = scene.panorama;
+      return img;
+    });
+  }
+
+
   render() {
-    return <PhotoViewer scenes={store.scenes} products={store.products} />;
+    return <PhotoViewer scenes={store.scenes} products={store.products}/>;
   }
 }
 
