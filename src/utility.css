@@ -7,6 +7,10 @@ button {
     cursor: pointer;
 }
 
+.cp{
+ cursor: pointer;
+}
+
 .btn-primary {
     background-color: #fb631c;
     color: #ffffff;
@@ -112,6 +116,11 @@ button {
 .pad-x-24 {
     padding-left: 24px;
     padding-right: 24px;
+}
+
+.pad-x-12 {
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 .pad-l-8 {

@@ -1,0 +1,30 @@
+.img-picker-tile {
+    height: 64px;
+    width: 64px;
+    padding: 5px;
+    border: 1px solid #f0f0f0;
+}
+
+.img-picker-tile-selected {
+    border: 2px solid #2874f0;
+}
+
+.image-list {
+}
+
+.img-picker-title-img {
+
+}
+
+.image-preview-c {
+    border-top: 1px solid #f0f0f0;
+    border-right: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.bg-img-cc {
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}

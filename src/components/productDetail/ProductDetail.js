@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import numeral from 'numeral';
 
+import ProductCarousel from './ProductCarousel/ProductCarousel';
+
 import calendarImg from 'imgs/cal.png';
 import tagImg from 'imgs/tag.png';
 import ecoFriendlyImg from 'imgs/eco-friendly.jpeg';
@@ -77,11 +79,7 @@ class ProductDetail extends Component {
 
   renderImageCarousel() {
     return (
-      <img
-        alt="images"
-        src={this.props.product.imageCollectionUrl}
-        className="img-carousel"
-      />
+      <ProductCarousel images={this.props.product.imageCollection}/>
     );
   }
 
@@ -153,7 +151,7 @@ class ProductDetail extends Component {
 ProductDetail.propTypes = {
   product: PropTypes.shape({
     id: PropTypes.string.isRequired,
-    imageCollectionUrl: PropTypes.string.isRequired,
+    imageCollection: PropTypes.arrayOf(PropTypes.string).isRequired,
     name: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
     averageRating: PropTypes.number.isRequired,

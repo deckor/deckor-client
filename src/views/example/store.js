@@ -53,7 +53,15 @@ export default {
   products: {
     p1: {
       id: 'p1',
-      imageCollectionUrl: `${process.env.PUBLIC_URL}/img/p1-detail.png`,
+      imageCollection: [
+        `${process.env.PUBLIC_URL}/img/living-room/coffee_table/1.jpeg`,
+        `${process.env.PUBLIC_URL}/img/living-room/coffee_table/2.jpeg`,
+        `${process.env.PUBLIC_URL}/img/living-room/coffee_table/3.jpeg`,
+        `${process.env.PUBLIC_URL}/img/living-room/coffee_table/4.jpeg`,
+        `${process.env.PUBLIC_URL}/img/living-room/coffee_table/5.jpeg`,
+        `${process.env.PUBLIC_URL}/img/living-room/coffee_table/6.jpeg`,
+        `${process.env.PUBLIC_URL}/img/living-room/coffee_table/7.jpeg`,
+      ],
       name: 'Spacewood Mayflower Engineering Wood Queen Box Bed (Finish Color - Brown)',
       price: 14499,
       averageRating: 3.8,
