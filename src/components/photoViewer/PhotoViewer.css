@@ -38,8 +38,33 @@
 
 .pnlm-hotspot--tag {
   background-image: url('../../icons/tag.svg');
-  height: 24px;
-  width: 24px;
+  height: 32px;
+  width: 32px;
+}
+
+.pnlm-hotspot--tag:after {
+    visibility: hidden;
+    width: 54px;
+    height: 54px;
+    content: "";
+    position: absolute;
+    z-index: 0;
+    left: calc(50% - 28px);
+    top: calc(50% - 28px);
+    border-radius: 50%;
+    transition: all .1s;
+    background: hsla(0,0%,100%,.3);
+    -webkit-box-shadow: 0 1px 10px 0 rgba(0,0,0,.3);
+    -moz-box-shadow: 0 1px 10px 0 rgba(0,0,0,.3);
+    box-shadow: 0 1px 10px 0 rgba(0,0,0,.3);
+    -webkit-animation: hzFadingImageTagBackground 1.5s ease-out;
+    -moz-animation: hzFadingImageTagBackground 1.5s ease-out;
+    -o-animation: hzFadingImageTagBackground 1.5s ease-out;
+    animation: hzFadingImageTagBackground 1.5s ease-out;
+}
+
+.pnlm-hotspot--tag:hover:after{
+    visibility: visible;
 }
 
 .panel {

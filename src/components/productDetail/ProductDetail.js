@@ -9,6 +9,29 @@ import fAssuredImg from 'imgs/f-assured.png';
 import './ProductDetail.css';
 
 const COMMA_FORMAT = '0,0';
+const offers = [
+  {
+    id: 1,
+    title: 'Bank Offer',
+    description: '5% off* on EMI transactions with HDFC Bank Credit Cards',
+    extraInfo: 'T&C',
+    extraInfoLink: '',
+  },
+  {
+    id: 2,
+    title: 'Bank Offer',
+    description: '5% off* on EMI transactions with HDFC Bank Credit Cards',
+    extraInfo: 'T&C',
+    extraInfoLink: '',
+  },
+  {
+    id: 3,
+    title: 'Bank Offer',
+    description: '5% off* with Axis Bank Buzz Credit Card',
+    extraInfo: 'T&C',
+    extraInfoLink: '',
+  },
+];
 
 class ProductDetail extends Component {
 
@@ -44,7 +67,7 @@ class ProductDetail extends Component {
           extraInfoLink: '',
         }) : null}
         {
-          product.offers.map(offer => (<React.Fragment key={offer.id}>
+          offers.map(offer => (<React.Fragment key={offer.id}>
             {this.renderOfferRow({ ...offer, icon: tagImg })}
           </React.Fragment>))
         }

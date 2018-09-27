@@ -2,32 +2,51 @@ export default {
   scenes: [
     {
       id: 'view_1',
-      panorama: `${process.env.PUBLIC_URL}/img/view_1.jpg`,
+      panorama: `${process.env.PUBLIC_URL}/img/living-room/Cam_1.jpg`,
       hfov: 120,
       markers: {
         navs: [
           {
-            pitch: -9.81,
-            yaw: 47.43,
-            sceneId: 'view_2',
-          },
-        ],
-        tags: [
-          {
-            pitch: -20.37,
-            yaw: 5.88,
-            productId: 'p1',
+            pitch: -0.81,
+            yaw: -10.8,
+            sceneId: 'view_3',
           },
         ],
       },
     },
     {
-      id: 'view_2',
-      panorama: `${process.env.PUBLIC_URL}/img/view_2.jpg`,
+      id: 'view_3',
+      panorama: `${process.env.PUBLIC_URL}/img/living-room/Cam_3.jpg`,
       hfov: 120,
       markers: {
-        navs: [],
-        tags: [],
+        navs: [
+          {
+            pitch: -4.23,
+            yaw: 37.35,
+            sceneId: 'view_5',
+          },
+        ],
+      },
+    },
+    {
+      id: 'view_5',
+      panorama: `${process.env.PUBLIC_URL}/img/living-room/Cam_5.jpg`,
+      hfov: 120,
+      markers: {
+        navs: [
+          {
+            pitch: -1.774,
+            yaw: 135.84,
+            sceneId: 'view_1',
+          },
+        ],
+        tags: [
+          {
+            pitch: -16.11,
+            yaw: -1.9,
+            productId: 'p1',
+          },
+        ],
       },
     },
   ],
@@ -41,29 +60,6 @@ export default {
       totalRatings: 2232,
       totalReviews: 524,
       emi: 2417,
-      offers: [
-        {
-          id: 1,
-          title: 'Bank Offer',
-          description: '5% off* on EMI transactions with HDFC Bank Credit Cards',
-          extraInfo: 'T&C',
-          extraInfoLink: '',
-        },
-        {
-          id: 2,
-          title: 'Bank Offer',
-          description: '5% off* on EMI transactions with HDFC Bank Credit Cards',
-          extraInfo: 'T&C',
-          extraInfoLink: '',
-        },
-        {
-          id: 3,
-          title: 'Bank Offer',
-          description: '5% off* with Axis Bank Buzz Credit Card',
-          extraInfo: 'T&C',
-          extraInfoLink: '',
-        },
-      ],
     },
   },
 };
