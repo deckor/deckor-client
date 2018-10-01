@@ -23,6 +23,16 @@ export default {
             yaw: -28.50,
             sceneId: 'view_4',
           },
+          {
+            pitch: -0.76,
+            yaw: -3.32,
+            sceneId: 'view_7',
+          },
+          {
+            pitch: -0.13,
+            yaw: -17.07,
+            sceneId: 'view_8',
+          },
         ],
       },
     },
@@ -51,6 +61,11 @@ export default {
             pitch: -6.91,
             yaw: -12.79,
             sceneId: 'view_5',
+          },
+          {
+            pitch:  0.34,
+            yaw: -8.39,
+            sceneId: 'view_8',
           },
         ],
       },
@@ -335,6 +350,11 @@ export default {
             yaw: -111.574,
             sceneId: 'view_4',
           },
+          {
+            pitch:  -0.12,
+            yaw: -121.65,
+            sceneId: 'view_1',
+          },
         ],
         tags: [
           {
@@ -390,6 +410,11 @@ export default {
             pitch: 0.94,
             yaw: -36.61,
             sceneId: 'view_4',
+          },
+          {
+            pitch: -0.37,
+            yaw: -57.60,
+            sceneId: 'view_2',
           },
         ],
         tags: [
