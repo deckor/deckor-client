@@ -19,9 +19,10 @@ class PhotoViewer extends Component {
   initViewer() {
     const { scenes } = this.props;
 
+    let firstScene = scenes[0].id;
     const config = {
       default: {
-        firstScene: scenes[0].id,
+        firstScene,
         sceneFadeDuration: 1000,
         autoLoad: true,
         // hotSpotDebug: true,
@@ -42,7 +43,18 @@ class PhotoViewer extends Component {
       {}
     );
 
-    window.pannellum.viewer('viewer', config);
+    window.prevSceneId = firstScene;
+    window.pannellumViewer = window.pannellum.viewer('viewer', config);
+    window.pannellumViewer.on('scenechange', (nextScene) => {
+      const lookAtItem = (this.props.lookAtMap[nextScene] || {})[window.prevSceneId];
+      window.prevSceneId = nextScene;
+      if (lookAtItem) {
+        window.pannellumViewer.lookAt(lookAtItem.pitch, lookAtItem.yaw, undefined, false);
+        setTimeout(() => {
+          window.pannellumViewer.lookAt(0, 0)
+        }, 1000);
+      }
+    });
   }
 
   getHotSpots(markers) {
@@ -109,6 +121,10 @@ class PhotoViewer extends Component {
 
 PhotoViewer.propTypes = {
   path: PropTypes.string,
+  lookAtMap: PropTypes.objectOf(PropTypes.objectOf(PropTypes.shape({
+    pitch: PropTypes.number.isRequired,
+    yaw: PropTypes.number.isRequired,
+  }))),
 };
 
 export default PhotoViewer;

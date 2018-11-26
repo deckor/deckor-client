@@ -63,7 +63,7 @@ export default {
             sceneId: 'view_5',
           },
           {
-            pitch:  0.34,
+            pitch: 0.34,
             yaw: -8.39,
             sceneId: 'view_8',
           },
@@ -108,12 +108,12 @@ export default {
       markers: {
         navs: [
           {
-            pitch:  -1.76,
+            pitch: -1.76,
             yaw: 119.61,
             sceneId: 'view_3',
           },
           {
-            pitch:  -1.73,
+            pitch: -1.73,
             yaw: 165.53,
             sceneId: 'view_2',
           },
@@ -123,7 +123,7 @@ export default {
             sceneId: 'view_1',
           },
           {
-            pitch:  -5.10,
+            pitch: -5.10,
             yaw: -37.53,
             sceneId: 'view_10',
           },
@@ -341,17 +341,17 @@ export default {
             sceneId: 'view_10',
           },
           {
-            pitch:  -29.18,
+            pitch: -29.18,
             yaw: -100.88,
             sceneId: 'view_6',
           },
           {
-            pitch:  0.17,
+            pitch: 0.17,
             yaw: -111.574,
             sceneId: 'view_4',
           },
           {
-            pitch:  -0.12,
+            pitch: -0.12,
             yaw: -121.65,
             sceneId: 'view_1',
           },
@@ -397,7 +397,7 @@ export default {
             sceneId: 'view_7',
           },
           {
-            pitch:  -11.70,
+            pitch: -11.70,
             yaw: -61.96,
             sceneId: 'view_6',
           },
@@ -489,7 +489,7 @@ export default {
       markers: {
         navs: [
           {
-            pitch:  -3.27,
+            pitch: -3.27,
             yaw: -2.37,
             sceneId: 'view_4',
           },
@@ -545,4 +545,19 @@ export default {
     },
   ],
   products,
+};
+
+export const SCENE_TO_LOOK_AT = {
+  view_2: {
+    view_1: {
+      pitch: 0.262,
+      yaw: 91.69,
+    },
+  },
+  view_3: {
+    view_2: {
+      pitch: 7.561,
+      yaw: 116.82,
+    },
+  },
 };

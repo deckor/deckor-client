@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PhotoViewer from 'components/photoViewer';
 
-import store from './store';
+import store, {SCENE_TO_LOOK_AT} from './store';
 
 class Example extends Component {
   state = {
@@ -19,7 +19,7 @@ class Example extends Component {
 
 
   render() {
-    return <PhotoViewer scenes={store.scenes} products={store.products}/>;
+    return <PhotoViewer scenes={store.scenes} products={store.products} lookAtMap={SCENE_TO_LOOK_AT}/>;
   }
 }
 
