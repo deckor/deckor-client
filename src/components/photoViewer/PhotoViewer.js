@@ -46,6 +46,7 @@ class PhotoViewer extends Component {
     window.prevSceneId = firstScene;
     window.pannellumViewer = window.pannellum.viewer('viewer', config);
     window.pannellumViewer.on('scenechange', (nextScene) => {
+      console.log('clicked on -- ', nextScene);
       const lookAtItem = (this.props.lookAtMap[nextScene] || {})[window.prevSceneId];
       window.prevSceneId = nextScene;
       if (lookAtItem) {

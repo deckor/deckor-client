@@ -142,6 +142,11 @@ export default {
             yaw: 12.79,
             sceneId: 'view_8',
           },
+          {
+            pitch: 0,
+            yaw: -8.2712,
+            sceneId: 'view_9',
+          }
         ],
         tags: [
           {
@@ -275,8 +280,8 @@ export default {
             sceneId: 'view_8',
           },
           {
-            pitch: -5.52,
-            yaw: 38.93,
+            pitch: 0,
+            yaw: 18.629,
             sceneId: 'view_9',
           },
           {
@@ -331,8 +336,8 @@ export default {
             sceneId: 'view_8',
           },
           {
-            pitch: -6.44,
-            yaw: -14.0,
+            pitch:  0,
+            yaw: -32.8423,
             sceneId: 'view_9',
           },
           {
@@ -402,8 +407,8 @@ export default {
             sceneId: 'view_6',
           },
           {
-            pitch: -13.94,
-            yaw: 39.66,
+            pitch: 0,
+            yaw: 20.510,
             sceneId: 'view_9',
           },
           {
@@ -448,8 +453,8 @@ export default {
       markers: {
         navs: [
           {
-            pitch: -3.77,
-            yaw: -59.46,
+            pitch: 0,
+            yaw: -53.535,
             sceneId: 'view_7',
           },
           {
@@ -461,6 +466,16 @@ export default {
             pitch: -5.45,
             yaw: 48.53,
             sceneId: 'view_10',
+          },
+          {
+            pitch: 0,
+            yaw: -95.376,
+            sceneId: 'view_8',
+          },
+          {
+            pitch: 0,
+            yaw: 19.6276,
+            sceneId: 'view_4',
           },
         ],
         tags: [
@@ -553,11 +568,209 @@ export const SCENE_TO_LOOK_AT = {
       pitch: 0.262,
       yaw: 91.69,
     },
+    view_3: {
+      pitch: -1.449,
+      yaw: 138.767
+    },
+    view_4: {
+      pitch: 0.657,
+      yaw: 151.92
+    },
+    view_5: {
+      pitch: -2.900,
+      yaw: 133.11,
+    },
+    view_8: {
+      pitch: -2.900,
+      yaw: 133.11,
+    },
   },
   view_3: {
+    view_1: {
+      pitch: 3.675,
+      yaw: 116.70,
+    },
     view_2: {
       pitch: 7.561,
       yaw: 116.82,
     },
+    view_4: {
+      pitch: -0.105,
+      yaw: 161.739,
+    },
   },
+  view_4: {
+    "view_1": {
+      pitch: 1.476,
+      yaw: -10.500,
+    },
+    "view_2": {
+      pitch: 0.626,
+      yaw: -44.61,
+    },
+    "view_3": {
+      pitch: 0.394,
+      yaw: -54.49,
+    },
+    "view_5": {
+      "pitch": 0.675,
+      "yaw": -152.829,
+    },
+    "view_6": {
+      "pitch": 1.501,
+      "yaw": -132.27,
+    },
+    "view_7": {
+      "pitch": -2.865,
+      "yaw": -133.267,
+    },
+    "view_8": {
+      "pitch": -0.859,
+      "yaw": -147.380,
+    },
+    "view_9": {
+      "pitch": 0,
+      "yaw": -159.358,
+    },
+    "view_10": {
+      "pitch":  1.654,
+      "yaw": -177.119,
+    }
+  },
+  view_5: {
+    "view_2": {
+      "pitch":  -3.993,
+      "yaw": -73.712,
+    },
+    "view_4": {
+      "pitch": -20.328,
+      "yaw": -50.970,
+    },
+    "view_10": {
+      "pitch": -6.730,
+      "yaw": 41.030,
+    }
+  },
+  view_6: {
+    "view_5": {
+      "pitch": -18.065,
+      "yaw": 79.56,
+    },
+    "view_7": {
+      "pitch": -30.144,
+      "yaw": -81.73,
+    },
+    "view_8": {
+      "pitch": -10.526,
+      "yaw": -130.470,
+    },
+    "view_9": {
+      "pitch":  -21.350,
+      "yaw": -155.120,
+    },
+    "view_10": {
+      "pitch":  -15.082,
+      "yaw": 142.377,
+    }
+  },
+  view_7: {
+    "view_1": {
+      "pitch": -5.240,
+      "yaw": 70.418,
+    },
+    "view_4": {
+      "pitch": -4.152,
+      "yaw": 75.19,
+    },
+    "view_5": {
+      "pitch": -9.253,
+      "yaw": 62.689,
+    },
+    "view_6": {
+      "pitch": -4.605,
+      "yaw": 89.564,
+    },
+    "view_8": {
+      "pitch": -4.635,
+      "yaw": 135.770,
+    },
+    "view_9": {
+      "pitch": -2.000,
+      "yaw": 126.781,
+    }
+  },
+  view_8: {
+    "view_1": {
+      "pitch": -3.846,
+      "yaw": 130.506,
+    },
+    "view_2": {
+      "pitch": -3.846,
+      "yaw": 130.506,
+    },
+    "view_4": {
+      "pitch": -3.846,
+      "yaw": 130.506,
+    },
+    "view_5": {
+      "pitch": -11.492,
+      "yaw": 105.69,
+    },
+    "view_6": {
+      "pitch": -11.492,
+      "yaw": 105.69,
+    },
+    "view_7": {
+      "pitch": -1.658,
+      "yaw": 93.550,
+    },
+    "view_9": {
+      pitch: 0,
+      yaw: 170.644,
+    },
+  },
+  view_9:{
+    "view_4": {
+      "pitch": 0,
+      "yaw": 167.715,
+    },
+    "view_6": {
+      "pitch": 0,
+      "yaw": 136.882,
+    },
+    "view_7": {
+      "pitch": -5.238,
+      "yaw": 127.474,
+    },
+    "view_8": {
+      "pitch": 0,
+      "yaw":  88.597,
+    },
+    "view_10": {
+      "pitch": -7.608,
+      "yaw": -164.464,
+    }
+  },
+  view_10: {
+    "view_4": {
+      "pitch": 0,
+      "yaw": 175.843,
+    },
+    "view_5": {
+      "pitch": 0,
+      "yaw": 110.60897,
+    },
+    "view_6": {
+      "pitch": 0,
+      "yaw": 94.8489,
+    },
+    "view_7": {
+      "pitch": 0,
+      "yaw": 94.8489,
+    },
+    "view_9": {
+      "pitch": 0,
+      "yaw": 42.4610
+    }
+  }
 };
