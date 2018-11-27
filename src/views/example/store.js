@@ -499,7 +499,7 @@ export default {
     },
     {
       id: 'view_10',
-      panorama: `${process.env.PUBLIC_URL}/img/living-room/Cam_1 (1)0.jpg`,
+      panorama: `${process.env.PUBLIC_URL}/img/living-room/Cam_10 (1).jpg`,
       hfov: 120,
       markers: {
         navs: [
