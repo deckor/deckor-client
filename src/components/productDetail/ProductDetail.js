@@ -8,6 +8,7 @@ import calendarImg from 'imgs/cal.png';
 import tagImg from 'imgs/tag.png';
 import ecoFriendlyImg from 'imgs/eco-friendly.jpeg';
 import fAssuredImg from 'imgs/f-assured.png';
+import flipkart from 'imgs/flipkart.svg';
 import './ProductDetail.css';
 
 const COMMA_FORMAT = '0,0';
@@ -135,15 +136,20 @@ class ProductDetail extends Component {
 
   render() {
     return (
-      <div className="ovf-y-auto color-212121 pos-rel pr-det-cont">
-        <div className="pad-x-24 pad-t-24">
-          {this.renderImageCarousel()}
-          {this.renderProductText()}
-          {this.renderOffers()}
+      <React.Fragment>
+        <div className="pr-det-header">
+          <img src={flipkart} className="fk-icon" />
         </div>
-        {this.renderProductDescription()}
-        {this.renderFooter()}
-      </div>
+        <div className="ovf-y-auto color-212121 pos-rel pr-det-cont mar-t-57">
+          <div className="pad-x-24 pad-t-24">
+            {this.renderImageCarousel()}
+            {this.renderProductText()}
+            {this.renderOffers()}
+          </div>
+          {this.renderProductDescription()}
+          {this.renderFooter()}
+        </div>
+      </React.Fragment>
     );
   }
 }

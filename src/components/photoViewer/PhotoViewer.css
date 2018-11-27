@@ -70,6 +70,7 @@
 }
 
 .panel {
+  display: none;
   background: white;
   box-shadow: 2px -6px 21px 0 rgba(0, 0, 0, 0.16);
   height: 100%;
@@ -86,6 +87,7 @@
 }
 
 .panel--open {
+  display: block;
   opacity: 1;
   transform: translate3d(0, 0, 0);
   transition-duration: 0.2s;

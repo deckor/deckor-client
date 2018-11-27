@@ -19,7 +19,7 @@ class PhotoViewer extends Component {
   initViewer() {
     const { scenes } = this.props;
 
-    let firstScene = scenes[0].id;
+    let firstScene = scenes[5].id;
     const config = {
       default: {
         firstScene,
