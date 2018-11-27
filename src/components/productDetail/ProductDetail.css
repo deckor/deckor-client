@@ -71,12 +71,13 @@
     top: 0;
     background-color: #2874f0;
     z-index: 1;
+    box-shadow: 3px 7px 16px -8px rgba(0,0,0,0.37);
 }
 
 .fk-icon{
-    top: -10px;
+    top: -16px;
     left: 24px;
     position: absolute;
-    height: 80px;
-    width: 80px;
+    height: 90px;
+    width: 90px;
 }
