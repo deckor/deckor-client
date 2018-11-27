@@ -4,7 +4,7 @@ export default {
   scenes: [
     {
       id: 'view_1',
-      panorama: `${process.env.PUBLIC_URL}/img/living-room/Cam_1.jpg`,
+      panorama: `${process.env.PUBLIC_URL}/img/living-room/Cam_1 (1).jpg`,
       hfov: 120,
       markers: {
         navs: [
@@ -103,7 +103,7 @@ export default {
     },
     {
       id: 'view_4',
-      panorama: `${process.env.PUBLIC_URL}/img/living-room/Cam_4.jpg`,
+      panorama: `${process.env.PUBLIC_URL}/img/living-room/Cam_4 (1).jpg`,
       hfov: 120,
       markers: {
         navs: [
@@ -179,7 +179,7 @@ export default {
     },
     {
       id: 'view_5',
-      panorama: `${process.env.PUBLIC_URL}/img/living-room/Cam_5.jpg`,
+      panorama: `${process.env.PUBLIC_URL}/img/living-room/Cam_5 (1).jpg`,
       hfov: 120,
       markers: {
         navs: [
@@ -255,7 +255,7 @@ export default {
     },
     {
       id: 'view_6',
-      panorama: `${process.env.PUBLIC_URL}/img/living-room/Cam_6.jpg`,
+      panorama: `${process.env.PUBLIC_URL}/img/living-room/Cam_6 (1).jpg`,
       hfov: 120,
       markers: {
         navs: [
@@ -326,7 +326,7 @@ export default {
     },
     {
       id: 'view_7',
-      panorama: `${process.env.PUBLIC_URL}/img/living-room/cam_7.jpg`,
+      panorama: `${process.env.PUBLIC_URL}/img/living-room/Cam_7 (1).jpg`,
       hfov: 120,
       markers: {
         navs: [
@@ -392,7 +392,7 @@ export default {
     },
     {
       id: 'view_8',
-      panorama: `${process.env.PUBLIC_URL}/img/living-room/Cam_8.jpg`,
+      panorama: `${process.env.PUBLIC_URL}/img/living-room/Cam_8 (1).jpg`,
       hfov: 120,
       markers: {
         navs: [
@@ -448,7 +448,7 @@ export default {
     },
     {
       id: 'view_9',
-      panorama: `${process.env.PUBLIC_URL}/img/living-room/Cam_9.jpg`,
+      panorama: `${process.env.PUBLIC_URL}/img/living-room/Cam_9 (1).jpg`,
       hfov: 120,
       markers: {
         navs: [
@@ -499,7 +499,7 @@ export default {
     },
     {
       id: 'view_10',
-      panorama: `${process.env.PUBLIC_URL}/img/living-room/Cam_10.jpg`,
+      panorama: `${process.env.PUBLIC_URL}/img/living-room/Cam_1 (1)0.jpg`,
       hfov: 120,
       markers: {
         navs: [
