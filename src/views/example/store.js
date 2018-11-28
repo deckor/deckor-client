@@ -38,7 +38,7 @@ export default {
     },
     {
       id: 'view_2',
-      panorama: `${process.env.PUBLIC_URL}/img/living-room/Cam_2.jpg`,
+      panorama: `${process.env.PUBLIC_URL}/img/living-room/Cam_2 (1).jpg`,
       hfov: 120,
       markers: {
         navs: [
@@ -72,7 +72,7 @@ export default {
     },
     {
       id: 'view_3',
-      panorama: `${process.env.PUBLIC_URL}/img/living-room/Cam_3.jpg`,
+      panorama: `${process.env.PUBLIC_URL}/img/living-room/Cam_3 (2).jpg`,
       hfov: 120,
       markers: {
         navs: [
